@@ -42,8 +42,16 @@ func main() {
 }
 
 func Services(c *gin.Context) {
-	serv := payment.Service{ID: 1, Name:"KCell", ShortName:"KCELL", Description:""}	
-	c.JSON(200, serv)
+	//client := payment.Client{ID:0, Name:"Test"} // Получаем клиента
+	//user := "Test"// Получаем пользователя
+
+	//Получаем список сервисов, доступных клиенту
+
+	
+	services := []payment.Service{
+		{ID: 1, Name:"KCell", ShortName:"KCELL", Description:""},
+		{ID: 2, Name:"Altel", ShortName:"ALTEL", Description:""}}
+	c.JSON(200, services)
 }
 
 func GetHolidays(c *gin.Context) {
