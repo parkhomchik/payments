@@ -1,5 +1,9 @@
 package payment
 
+import(
+	"time"
+)
+
 //Service сервисы
 type Service struct{
 	ID int
@@ -8,6 +12,7 @@ type Service struct{
 	Description string
 	IsEnable bool
 	IsAnonimusEnable bool
+	Create time.Time
 }
 
 //Client клиенты приложения
